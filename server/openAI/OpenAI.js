@@ -4,7 +4,7 @@ const readline = require('readline')
 
 
 const configuration = new Configuration({
-    apiKey: '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'
+    apiKey: process.env.OPEN_AI_KEY
 })
 
 const openai = new OpenAIApi(configuration)

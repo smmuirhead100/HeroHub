@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const config = require('dotenv').config()
 const UserModel = require('./models/Users')
 const cors = require('cors')
 const getResponse = require('./openAi/OpenAI')
@@ -38,7 +39,7 @@ async function verifyNewUser(username) {
 
 async function connect() {
     try {
-        mongoose.connect("mongodb+srv://smmuirhead100:Ruedog12362@cluster0.vgyqm67.mongodb.net/impersonator")
+        mongoose.connect(process.env.MONGO_KEY)
         console.log('connected to MongoDB')
     } catch (error) {
         console.log(`reached an error: ${error}`)
