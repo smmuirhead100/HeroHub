@@ -24,7 +24,6 @@ async function getUser(username, password){
 
 async function getUsers(){
     const Users = await UserModel.find({});
-    console.log(Users)
     return Users;
 }
 
