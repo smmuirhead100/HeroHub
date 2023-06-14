@@ -5,13 +5,13 @@
 <h3>Current Progress</h3>
 <ol>
   <li>Allow interaction with OpenAI GPT API via terminal. &#9989;</li>
-  <li>Set up Express server.</li>
-  <li>Set up a simple POST request to the server, with a prompt as the body.</li>
-  <li>Create React app, allowing to make post requests based on prompt input.</li>
-  <li>Allow character changes between at least two characters.</li>
-  <li>Establish connection to MongoDB database.</li>
-  <li>Create MongoDB model for UserModel.</li>
-  <li>Set up back-end POST request for logging in and creating new user.</li>
+  <li>Set up Express server. &#9989;</li>
+  <li>Set up a simple POST request to the server, with a prompt as the body. &#9989;</li>
+  <li>Create React app, allowing to make post requests based on prompt input. &#9989;</li>
+  <li>Allow character changes between at least two characters. &#9989;</li>
+  <li>Establish connection to MongoDB database. &#9989;</li>
+  <li>Create MongoDB model for UserModel. &#9989;</li>
+  <li>Set up back-end POST request for logging in and creating new user. &#9989;</li>
   <li>Implement front-end sign-up / log-in page. Should appear before actual app.</li>
   <li>Decide on initial UI (Figma).</li>
   <li>Implement UI.</li>
