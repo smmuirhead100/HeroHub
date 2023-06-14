@@ -12,7 +12,8 @@
   <li>Establish connection to MongoDB database. &#9989;</li>
   <li>Create MongoDB model for UserModel. &#9989;</li>
   <li>Set up back-end POST request for logging in and creating new user. &#9989;</li>
-  <li>Implement front-end sign-up / log-in page. Should appear before actual app.</li>
+  <li>Implement front-end sign-up / log-in page. Should appear before actual app. &#9989;</li>
+  <li>Refactor code and make it more readable.</li>
   <li>Decide on initial UI (Figma).</li>
   <li>Implement UI.</li>
   <li>Go serverless.</li>
