@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
+import { Navigate } from "react-router-dom"
 
 
-export default function Prompter() {
+export default function Chat(props) {
     const characters = ['Chicken Joe', 'Jack Sparrow']
     const [character, setCharacter] = useState("Chicken Joe")
     const [prompt, setPrompt] = useState("where you from")
@@ -14,7 +15,7 @@ export default function Prompter() {
     const [response, setResponse] = useState("")
     
     useEffect(() => {
-        Axios.post('http://localhost:3001/getResponse', {
+        Axios.post('http://localhost:3001/chat/getResponse', {
             character, 
             prompt
         }).then((response) => {
@@ -25,7 +26,9 @@ export default function Prompter() {
   function handleCharacterSelection(e) {
     setCharacter(e.target.value)
   }
-
+  if (!props.authenticated) {
+    return <Navigate replace to='/login' />
+  } else {
     return (
         <div>
             <div>{character}: {response}</div>
@@ -39,4 +42,5 @@ export default function Prompter() {
             </div>
         </div>
     )
+  }
 }

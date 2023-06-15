@@ -49,7 +49,7 @@ router.post("/createUser", async (req, res) => {
     }
 })
 
-router.post("/login", async (req, res) => {
+router.post("/", async (req, res) => {
     console.log('got request...')
     const username = req.body.username
     const password = req.body.password

@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
-const home = require('./routes/home')
+const home = require('./routes/login')
 const chat = require('./routes/chat')
 
 //parse JSON
@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 
 //Routes
-app.use('/home', home)
+app.use('/login', home)
 app.use('/chat', chat)
 
 //Connect to MongoDB
