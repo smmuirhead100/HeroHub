@@ -15,6 +15,7 @@
   <li>Implement front-end sign-up / log-in page. Should appear before actual app. &#9989;</li>
   <li>Refactor code and make it more readable. &#9989;</li>
   <li>Design initial UI (Figma). &#9989;</li>
+  <li>Fix bug where character speaks twice upon render &#9989;</li>
   <li>Implement UI.</li>
   <li>Construct GET endpoint in backend that retrieves character information from MongoDB</li>
   <li>Incorporate new GET request into front-end</li>

@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
 import { Navigate } from "react-router-dom"
+import "./styles/chat.css"
+import chickenJoe from '../assets/chicken-joe.webp'
 
 
 export default function Chat(props) {
-    const characters = ['Chicken Joe', 'Jack Sparrow']
     const [character, setCharacter] = useState("Chicken Joe")
     const [prompt, setPrompt] = useState("where you from")
-    const [body, setBody] = useState({
-        character: {character}, 
-        prompt: {prompt}
-    })
     const [sentPrompt, setSentPrompt] = useState(false)
     const [response, setResponse] = useState("")
     
@@ -23,23 +20,26 @@ export default function Chat(props) {
       })
   }, [sentPrompt])
 
-  function handleCharacterSelection(e) {
-    setCharacter(e.target.value)
-  }
   if (!props.authenticated) {
     return <Navigate replace to='/login' />
   } else {
     return (
         <div>
-            <div>{character}: {response}</div>
-            <input type="text" placeholder="say something" onChange={(e) => setPrompt(e.target.value)}></input>
-            <button onClick={() => setSentPrompt((prev) => !prev)}>submit</button>
-            <div className='characterSelection'>
-                <label for="chickenJoe">Chicken Joe</label>
-                <input id="chickenJoe" name="character" value={characters[0]} type="radio" onChange={handleCharacterSelection} />
-                <label for="jackSparrow">Jack Sparrow</label>
-                <input id="jackSparrow" name="character" value={characters[1]} type="radio" onChange={handleCharacterSelection} />
+            <div className='chat--wrapper'>
+              <div className='chat--image'>
+                <img src={chickenJoe} />
+              </div>
+              <div className='chat--chatbox'>
+                <div className='dialogue'>{response}</div>
+                <div className='prompt'>
+                  <input type="text" placeholder="say something" onChange={(e) => setPrompt(e.target.value)}></input>
+                  <button onClick={() => setSentPrompt((prev) => !prev)}>Send</button>
+                </div>
+              </div>
             </div>
+            
+            
+          
         </div>
     )
   }

@@ -4,7 +4,7 @@ import Chat from "./pages/Chat"
 import Login from "./pages/Login"
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(false)
+  const [authenticated, setAuthenticated] = useState(true)
 
   function authenticate(){
     setAuthenticated(true)

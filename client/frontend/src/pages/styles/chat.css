@@ -1,0 +1,60 @@
+.chat--wrapper {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(90deg, #B235FF -18.3%, #FA982F 110.1%);
+    height: 100vh;
+    overflow: auto;
+}
+
+.chat--image {
+    flex-grow: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.chat--image img {
+    width: max(200px, 60%);
+}
+
+.chat--chatbox {
+    flex-grow: 1;
+    border-radius: 2rem;
+    background-color: white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    width: 600px;
+    padding: 2rem;
+    min-height: min-content;
+}
+
+.chat--chatbox .dialogue {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0.37)), linear-gradient(90deg, #D86A91 0%, #EA825D 100%);
+}
+
+.chat--chatbox .prompt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat--chatbox .prompt input{
+    border: solid;
+    width: 85%;
+    border-radius: 3rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+}
+
+.chat--chatbox .prompt button {
+    background-color: white;
+    border: none;
+}
