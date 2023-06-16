@@ -36,12 +36,32 @@
 }
 
 .chat--chatbox .dialogue {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow: auto;
+}
+
+.dialogue .character {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0.37)), linear-gradient(180deg, #E77D67 0%, #F18B4A 100%);
     padding: 1rem;
+    margin-right: 5rem;
     border-radius: 1rem;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0.37)), linear-gradient(90deg, #D86A91 0%, #EA825D 100%);
+    width: fit-content;
+}
+
+.dialogue .user {
+    background-color: #D66698;
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    margin-left: 5rem;
+    width: fit-content;
+    align-self: flex-end;
 }
 
 .chat--chatbox .prompt {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 }

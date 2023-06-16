@@ -7,6 +7,7 @@ import chickenJoe from '../assets/chicken-joe.webp'
 
 export default function Chat(props) {
     const [character, setCharacter] = useState("Chicken Joe")
+    const [responseArray, setResponseArray] = useState([['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study']])
     const [prompt, setPrompt] = useState("where you from")
     const [sentPrompt, setSentPrompt] = useState(false)
     const [response, setResponse] = useState("")
@@ -16,9 +17,19 @@ export default function Chat(props) {
             character, 
             prompt
         }).then((response) => {
-        setResponse(response.data)
-      })
-  }, [sentPrompt])
+        setResponseArray((prev) => [...prev, ['character', response.data]])
+        })}, [sentPrompt])
+
+    const chat = responseArray.map((sentence) => {
+      return (
+        <div className={sentence[0]}>{sentence[1]}</div>
+      )
+    })
+
+  function sendPrompt() {
+    setResponseArray((prev) => [...prev, ['user', prompt]])
+    setSentPrompt((prev) => !prev)
+  }
 
   if (!props.authenticated) {
     return <Navigate replace to='/login' />
@@ -30,10 +41,12 @@ export default function Chat(props) {
                 <img src={chickenJoe} />
               </div>
               <div className='chat--chatbox'>
-                <div className='dialogue'>{response}</div>
+                <div className='dialogue'>
+                  {chat}
+                </div>
                 <div className='prompt'>
                   <input type="text" placeholder="say something" onChange={(e) => setPrompt(e.target.value)}></input>
-                  <button onClick={() => setSentPrompt((prev) => !prev)}>Send</button>
+                  <button onClick={sendPrompt}>Send</button>
                 </div>
               </div>
             </div>
