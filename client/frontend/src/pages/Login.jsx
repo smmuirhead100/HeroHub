@@ -57,7 +57,7 @@ export default function SignUp(props) {
 
 
     if (props.authenticated) {
-        return <Navigate replace to='/chat' />
+        return <Navigate replace to='/choose' />
       } else {
             return (
                 <div>

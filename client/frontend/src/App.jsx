@@ -5,7 +5,7 @@ import Login from "./pages/Login"
 import ChooseCharacter from "./pages/ChooseCharacter"
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(true)
+  const [authenticated, setAuthenticated] = useState(false)
 
   function authenticate(){
     setAuthenticated(true)
@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ChooseCharacter authenticated={authenticated}/>} />
+        <Route path="/choose" element={<ChooseCharacter authenticated={authenticated}/>} />
         <Route path="chat" element={<Chat authenticated={authenticated}/>} />
         <Route path='login' element={<Login authenticate={authenticate} authenticated={authenticated}/>} />
       </Routes>

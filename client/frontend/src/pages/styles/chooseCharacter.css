@@ -1,0 +1,15 @@
+.chooseCharacter--wrapper h1 {
+    text-align: center;
+}
+
+.chooseCharacter--wrapper {
+    height: 100vh;
+    margin: 0px;
+    background: linear-gradient(90deg, #B235FF -18.3%, #FA982F 110.1%);
+}
+
+.chooseCharacter--cards {
+    display: flex;
+    overflow: auto;
+    gap: 4rem
+}
