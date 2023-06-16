@@ -21,3 +21,11 @@
   <li>Incorporate new GET request into front-end</li>
   <li>Go serverless.</li>
 </ol>
+
+
+
+<h3>Notes and Bugs</h3>
+<ul>
+  <li>UI needs significant changing</li>
+  <li>Bug: Crashes server when login or sign in is sent without a field </li>
+</ul>

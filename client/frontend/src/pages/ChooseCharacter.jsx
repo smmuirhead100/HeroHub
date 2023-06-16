@@ -1,6 +1,14 @@
-<div className='characterSelection'>
-                <label for="chickenJoe">Chicken Joe</label>
-                <input id="chickenJoe" name="character" value={characters[0]} type="radio" onChange={handleCharacterSelection} />
-                <label for="jackSparrow">Jack Sparrow</label>
-                <input id="jackSparrow" name="character" value={characters[1]} type="radio" onChange={handleCharacterSelection} />
-</div>
+import { useState } from 'react'
+import chickenJoe from '../assets/chicken-joe.webp'
+import CharacterCard from './CharacterCard'
+
+export default function ChooseCharacter(){
+    return (
+    <div className='chooseCharacter--wrapper'>
+        <h1>Who do you want to talk to?</h1>
+        <div chooseCharacter--cards>
+            <CharacterCard character='chicken-joe' image={chickenJoe}/>
+        </div>
+    </div>
+    )
+}

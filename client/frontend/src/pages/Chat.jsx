@@ -7,7 +7,7 @@ import chickenJoe from '../assets/chicken-joe.webp'
 
 export default function Chat(props) {
     const [character, setCharacter] = useState("Chicken Joe")
-    const [responseArray, setResponseArray] = useState([['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study'], ['user', 'hello i am a person wanting to talk to you what the heck'], ['character', 'Hello. I am a chicken and I am here to help you study']])
+    const [responseArray, setResponseArray] = useState([])
     const [prompt, setPrompt] = useState("where you from")
     const [sentPrompt, setSentPrompt] = useState(false)
     const [response, setResponse] = useState("")

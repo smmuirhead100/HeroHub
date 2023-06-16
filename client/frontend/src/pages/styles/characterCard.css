@@ -1,0 +1,37 @@
+.characterCard--wrapper {
+    background-color: #E7A2A2;
+    height: 600px;
+    width: 500px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    margin: 0px;
+    border-radius: 2rem;
+}
+
+.characterCard--wrapper .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.characterCard--wrapper .bottom {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding: 1rem;
+    background-color: white;
+    height: 60%;
+    width: 90%;
+    border-radius: 1rem;
+    bottom: 0;
+    margin: 1rem;
+}
+
+
+.characterCard--wrapper .top img{
+    width: 200px
+    
+}
