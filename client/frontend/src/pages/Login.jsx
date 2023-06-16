@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
 import { Navigate } from "react-router-dom"
+import './styles/login.css'
 
 export default function SignUp(props) {
     const [name, setName] = useState("")
@@ -41,6 +42,25 @@ export default function SignUp(props) {
       } else {
             return (
                 <div>
+                    <div className='login--wrapper'>
+                        <div className='loginChooser'>
+                            <div className='signUp'> Sign up</div>
+                            <div className='login'>Log in</div>
+                        </div>
+                        <div className='login--choice'>Sign up</div>
+                        <button className='google'>Google</button>
+                        <div className='login--splitter'>OR</div>
+                        <div className='login--input'>
+                            <input type="text" id='firstName'></input>
+                            <input type='text' id='lastName'></input>
+                            <input type='email' id='email'></input>
+                        </div>
+                        <button className='login--button'></button>
+                    </div>
+                    
+                    
+                    
+                    <h1>===========</h1>
                     <h1>Please Sign In</h1>
                     <h2>Your signed in: {success.toString()}</h2>
                     <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}></input>
