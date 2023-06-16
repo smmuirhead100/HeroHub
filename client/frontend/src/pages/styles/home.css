@@ -1,0 +1,75 @@
+.home--wrapper {
+    background-image: url('../../assets/home-background.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.home--header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.home--header img {
+    width: 8rem
+}
+
+.home--header .pages {
+    display: flex;
+    gap: 7rem;
+    padding-right: 10rem;
+    font-size: 1.5rem;
+
+}
+
+.home--info {
+    width: max(600px, 50%);
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    display: flex;
+    padding-left: 2rem;
+    height: max(40vh, 550px);
+    gap: 4rem;
+
+}
+
+.home--info .title{
+    font-size:5rem;
+    margin: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.home--info .description {
+    width: 80%;
+    font-size: 1.3rem;
+    color: grey;
+    padding-bottom: 3rem
+}
+
+.home--info .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home--info button {
+    border: none;
+    background: linear-gradient(89.76deg, #FA982F 0.18%, #FF5E43 99.78%, rgba(196, 196, 196, 0) 99.78%);
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    width: 50%;
+    height: 3rem;
+    font-size: large;
+    color: white;
+}
+
+.home--info a {
+    color: grey;
+}
+
+button:hover {
+    cursor: pointer;
+}

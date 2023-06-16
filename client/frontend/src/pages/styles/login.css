@@ -46,6 +46,7 @@
     background: rgba(17, 17, 17, 0.25);
     padding: 1rem;
     width: 100%;
+    justify-self: flex-start;
 }
 
 .login--choice {
