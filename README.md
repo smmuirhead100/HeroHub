@@ -19,7 +19,7 @@
   <li>Implement initial UI, doesn't need to be perfect. &#9989;</li>
   <li>Make it so choosing certain character leads to chatting with them</li>
   <li>Construct GET endpoint in backend that retrieves character information from MongoDB</li>
-  <li>Incorporate new GET request into front-end</li>
+  <li>Incorporate new GET request into front-end.</li>
   <li>Go serverless.</li>
 </ol>
 
