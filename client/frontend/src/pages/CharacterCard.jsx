@@ -1,13 +1,23 @@
-import React from "react"
-import './styles/characterCard.css'
-import { Navigate } from "react-router-dom"
+import React, { useState, useEffect } from "react";import './styles/characterCard.css'
+import { useNavigate } from "react-router-dom"
 
 export default function CharacterCard(props) {
-    const [clicked, setClicked] = React.useState(false)
+    const [clicked, setClicked] = useState(false)
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const chat = (props) => {
+            navigate("/chat", {
+                state: {
+                    test: props
+                }
+            })
+        }
+        if (clicked) {
+            chat(props)
+        }
+    }, [clicked])
     
-    if (clicked) {
-        return <Navigate replace to='/chat' />
-    } else {
         return (
             <div className="characterCard--wrapper" onClick={()=> setClicked(true)}>
                 <div className="top">
@@ -19,5 +29,5 @@ export default function CharacterCard(props) {
                 </div>
 
             </div>
-        )}
-}
+        )
+    }

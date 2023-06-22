@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
-import { Navigate } from "react-router-dom"
+import { useLocation, Navigate } from "react-router-dom"
 import './styles/login.css'
 import GoogleButton from 'react-google-button'
 
@@ -16,7 +16,6 @@ export default function SignUp(props) {
     const [success, setSuccess] = useState(false)
     const [signUpAttempts, setSignUpAttempts] = useState(true)
     const [firstRender, setFirstRender] = useState(true)
-
 
     useEffect(() => {
         Axios.post('http://localhost:3001/login', {
@@ -82,7 +81,7 @@ export default function SignUp(props) {
                                     <input placeholder='Last Name' type='text' id='lastName' onChange={(e) => setLastName(e.target.value)}></input>
                                     <input placeholder='Email'type='email' id='email' onChange={(e) => setEmail(e.target.value)}></input>
                                     <input placeholder='Username' type='text' id='username' onChange={(e) => setUsername(e.target.value)}></input>
-                                    <input placeholder='Password' type='password' id='username' onChange={(e) => setPassword(e.target.value)}></input>
+                                    <input placeholder='Password' type='password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
                                     <button className='login--button' onClick={() => setSignUpAttempts((prev) => !prev)}>{currChoice}</button>
                                 </div>
                             }

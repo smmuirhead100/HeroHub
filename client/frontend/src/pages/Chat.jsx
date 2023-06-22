@@ -1,23 +1,27 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
-import { Navigate } from "react-router-dom"
+import { useLocation, Navigate } from "react-router-dom"
 import "./styles/chat.css"
 import chickenJoe from '../assets/chicken-joe.webp'
 
 
 export default function Chat(props) {
-    const [character, setCharacter] = useState("Chicken Joe")
+    const location = useLocation();
+    const [character, setCharacter] = useState(location.state.test.character)
     const [responseArray, setResponseArray] = useState([])
-    const [prompt, setPrompt] = useState("where you from")
+    const [prompt, setPrompt] = useState("hello")
     const [sentPrompt, setSentPrompt] = useState(false)
     const [response, setResponse] = useState("")
     
+
     useEffect(() => {
         Axios.post('http://localhost:3001/chat/getResponse', {
             character, 
             prompt
         }).then((response) => {
-        setResponseArray((prev) => [...prev, ['character', response.data]])
+          setResponseArray((prev) => [...prev, ['character', response.data]])
+          console.log('sent')
+          console.log(responseArray)
         })}, [sentPrompt])
 
     const chat = responseArray.map((sentence) => {
@@ -38,7 +42,7 @@ export default function Chat(props) {
         <div>
             <div className='chat--wrapper'>
               <div className='chat--image'>
-                <img src={chickenJoe} />
+                <img src={location.state.test.image} />
               </div>
               <div className='chat--chatbox'>
                 <div className='dialogue'>

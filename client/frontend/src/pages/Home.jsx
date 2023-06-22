@@ -1,17 +1,28 @@
 import './styles/home.css'
 import logo from '../assets/logo.png'
-import { useState } from 'react'
-import { Navigate } from "react-router-dom"
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Home(props) {
-    const[clicked, setClicked] = useState(false)
+    const [clicked, setClicked] = useState(false)
+    const test = 'hello'
+    const navigate = useNavigate();
 
-    function signUpClicked(){
-        setClicked(true)
-    }
-    if (clicked) {
-        return <Navigate replace to='/login' />
-      } else {
+    useEffect(() => {
+        const login = (test) => {
+            navigate("/login", {
+                state: {
+                    test: test
+                }
+            })
+        }
+
+        if (clicked) {
+            login(test)
+        }
+    }, [clicked])
+    
+
         return (
         <div className="home--wrapper">
             <div className="home--header">
@@ -29,11 +40,10 @@ export default function Home(props) {
                 by implementing the highest safety measures provided by OpenAI. 
                 </div>
                 <div className='button'>
-                    <button onClick={signUpClicked}>Sign Up</button>
+                    <button onClick={() => setClicked(true)}>Sign Up</button>
                     <a>Or log in</a>
                 </div>
             </div>
         </div>
         )
       }
-}

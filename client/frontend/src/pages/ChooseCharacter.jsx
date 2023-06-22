@@ -3,11 +3,12 @@ import chickenJoe from '../assets/chicken-joe.webp'
 import CharacterCard from './CharacterCard'
 import jackSparrow from '../assets/jack-sparrow.png'
 import './styles/chooseCharacter.css'
+import { Navigate } from "react-router-dom"
 
 export default function ChooseCharacter(props){
     
     if (!props.authenticated) {
-        return <Navigate replace to='/login' />
+        return <Navigate replace to='/login'></Navigate>
       } else {
         return (
         <div className='chooseCharacter--wrapper'>
