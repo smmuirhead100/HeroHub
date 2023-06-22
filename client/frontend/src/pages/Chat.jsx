@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import Axios from 'axios'
 import { useLocation, Navigate } from "react-router-dom"
 import "./styles/chat.css"
-import chickenJoe from '../assets/chicken-joe.webp'
 
 
 export default function Chat(props) {
