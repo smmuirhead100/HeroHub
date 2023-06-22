@@ -23,6 +23,9 @@
   <li>Local storage remembers that your logged in. (Ex. Won't log out on refresh)</li>
   <li>Remembers chat history</li>
   <li>Update initial prompt</li>
+  <li>Implement about and Home page</li>
+  <li>Make Home page Log in button work</li>
+  <li>Allow to login / sign up with Google</li>
   <li>Go serverless.</li>
 </ol>
 
