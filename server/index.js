@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const home = require('./routes/login')
 const chat = require('./routes/chat')
-const CharacterModel = require('./models/Character')
+const getCharacters = require('./middleware/GetCharacters')
 
 //parse JSON
 app.use(express.json())
@@ -16,12 +16,7 @@ app.use(cors())
 app.use('/login', home)
 app.use('/chat', chat)
 
-//Tests 
-async function getCharacters() {
-    const Characters = await CharacterModel.find({})
-    return Characters
-}
-
+//Get Characters
 app.get("/getCharacters", async (req, res) => {
     try {
       const characters = await getCharacters(); // Wait for the characters to be retrieved
