@@ -29,7 +29,7 @@ app.get("/getCharacters", async (req, res) => {
   });
   
 app.get("/test", async (req, res) => {
-    res.send(<h1>Hello World</h1>)
+    res.send("Hello World")
   });
 
 //Connect to MongoDB
