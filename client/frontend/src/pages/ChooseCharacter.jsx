@@ -10,7 +10,7 @@ export default function ChooseCharacter(props){
     const [characters, setCharacters] = useState([])
 
     useEffect(() => {
-      Axios.get('http://localhost:3001/getCharacters')
+      Axios.get('http://www.herohub.app/getCharacters')
         .then((response) => {
           setCharacters(response.data);
         })

@@ -14,10 +14,13 @@ export default function Chat(props) {
     
 
     useEffect(() => {
-        Axios.post('http://localhost:3001/chat/getResponse', {
+        Axios.post('https://www.herohub.app/chat/getResponse', {
             character, 
             prompt
-        }).then((response) => {
+        }, { headers:{
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        }}).then((response) => {
           setResponseArray((prev) => [...prev, ['character', response.data]])
           console.log('sent')
           console.log(responseArray)

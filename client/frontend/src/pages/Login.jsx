@@ -18,7 +18,7 @@ export default function SignUp(props) {
     const [firstRender, setFirstRender] = useState(true)
 
     useEffect(() => {
-        Axios.post('http://localhost:3001/login', {
+        Axios.post('https://www.herohub.app/login', {
             username, 
             password
         }).then((response) => {
@@ -38,7 +38,7 @@ export default function SignUp(props) {
 
   useEffect(() => {
     firstRender ? setFirstRender(false) :
-    Axios.post('http://localhost:3001/login/createUser', {
+    Axios.post('https://www.herohub.app/login/createUser', {
       firstName, 
       lastName,
       email,
@@ -87,17 +87,6 @@ export default function SignUp(props) {
                             }
                         </div>
                     </div>
-                    
-                    
-                    
-                    <h1>===========</h1>
-                    <h1>Please Sign In</h1>
-                    <h2>Your signed in: {success.toString()}</h2>
-                    <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}></input>
-                    <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
-                    <button onClick={() => setAttempts((prev) => !prev)}>Submit</button>
-
-                    
                 </div>
             )
       }
