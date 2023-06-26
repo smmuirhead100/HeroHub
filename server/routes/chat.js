@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const UserModel = require('../models/Users')
-const getResponse = require('../openAi/OpenAI.js')
+const getResponse = require('../openAI/OpenAI.js')
 
 
 
