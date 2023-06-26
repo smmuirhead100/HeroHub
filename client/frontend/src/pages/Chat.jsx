@@ -14,7 +14,7 @@ export default function Chat(props) {
     
 
     useEffect(() => {
-        Axios.post('https://www.herohub.app/chat/getResponse', {
+        Axios.post('https://herohub.onrender.com/chat/getResponse', {
             character, 
             prompt
         }, { headers:{

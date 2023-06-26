@@ -18,7 +18,7 @@ export default function SignUp(props) {
     const [firstRender, setFirstRender] = useState(true)
 
     useEffect(() => {
-        Axios.post('https://www.herohub.app/login', {
+        Axios.post('https://herohub.onrender.com/login', {
             username, 
             password
         }).then((response) => {
@@ -38,7 +38,7 @@ export default function SignUp(props) {
 
   useEffect(() => {
     firstRender ? setFirstRender(false) :
-    Axios.post('https://www.herohub.app/login/createUser', {
+    Axios.post('https://herohub.onrender.com/login/createUser', {
       firstName, 
       lastName,
       email,
