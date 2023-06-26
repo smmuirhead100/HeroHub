@@ -1,6 +1,6 @@
 <h1>HeroHub</h1>
 
-<h3>HeroHub leverages the power of OpenAI to allow users to interact with their favorite fictional characters.</h3>
+<h3><a href="https://www.herohub.app">HeroHub</a> leverages the power of OpenAI to allow users to interact with their favorite fictional characters.</h3>
 
 <h3>Current Progress</h3>
 <ol>
