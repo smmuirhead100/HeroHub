@@ -6,6 +6,7 @@ const home = require('./routes/login')
 const chat = require('./routes/chat')
 const getCharacters = require('./middleware/GetCharacters')
 
+
 //parse JSON
 app.use(express.json())
 
@@ -27,6 +28,9 @@ app.get("/getCharacters", async (req, res) => {
     }
   });
   
+app.get("/test", async (req, res) => {
+    res.send(<h1>Hello World</h1>)
+  });
 
 //Connect to MongoDB
 async function connect() {
