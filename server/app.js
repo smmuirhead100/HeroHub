@@ -37,6 +37,7 @@ async function connect() {
     try {
         mongoose.connect(process.env.MONGO_KEY)
         console.log('connected to MongoDB')
+        console.log(process.env.MONGO_KEY)
     } catch (error) {
         console.log(`reached an error: ${error}`)
     }
