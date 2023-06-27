@@ -26,7 +26,7 @@
   <li>Implement about and Home page</li>
   <li>Make Home page Log in button work</li>
   <li>Allow to login / sign up with Google</li>
-  <li>Go serverless.</li>
+  <li>Deploy &#9989;</li>
 </ol>
 
 
